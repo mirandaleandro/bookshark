@@ -1,0 +1,66 @@
+#{extends 'main.html' /}
+#{set title:'Content inception' /}
+#{top user:user, pageName:"upload" /}
+
+
+    <div class="container">
+
+        <div class="content">
+
+            #{page_header pagename:'Content inception',tagline:'new files' /}
+
+            #{ifErrors}
+            <div class="error">
+                <h2>Oops, please submit a valid file</h2>
+            </div>
+
+            #{/ifErrors}
+
+
+#{if user}
+                <div class="row">
+                    <div class="span12">
+                        &nbsp;
+                        <div class="row">
+                            <div class="span3">
+                                 &nbsp;
+                            </div>
+                            <div class="span9">
+
+                            <form class="form-stacked" action="@{ContentInception.uploadResource()}" method="POST" enctype="multipart/form-data">
+
+                                <input type="hidden" name="userid" value='${user.id}'>
+
+                                <fieldset>
+
+                                   <div class="bottom_line">
+                                        <legend>Upload a new File</legend>
+                                   </div>
+
+                                    <div class="clearfix">
+                                        <div class="input">
+                                            <input class="span9" id="file" name="file" type="file">
+                                            <input type="submit" class="btn primary" value="Upload">
+                                        </div>
+                                    </div><!-- /clearfix -->
+                                </fieldset>
+
+                                </fieldset>
+
+
+                            </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+#{/if}
+#{else}
+Please log in
+#{/else}
+        </div>
+    #{bottom /}
+    </div>
+

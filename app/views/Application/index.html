@@ -1,0 +1,35 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+#{top user:user, pageName:"index" /}
+
+
+
+<div class="container">
+
+    <div class="content">
+
+         #{page_header pagename:'Search' /}
+
+             <div class="full-search-bar">
+                 <ul class="item-stream unstyled search-input-stream v-centralize">
+                     <li class="stream-item stream-header search-input-item">
+
+                         <form class="form-inline search-form" action="@{Search.search()}">
+                             <input class="xlarge" id="search" name="searchTerm" type="text" placeholder="Type your search here" role="textbox">
+                             <button class="btn btn-large search-button" type="submit"><i class="icon-search icon-white"></i></button>
+                         </form>
+
+                     </li>
+                 </ul>
+             </div>
+
+    </div>
+
+#{bottom /}
+
+</div> <!-- /container -->
+
+
+
+

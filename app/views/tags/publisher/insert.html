@@ -1,0 +1,40 @@
+<!-- Publisher !-->
+<div class="row">
+    <div class="span3 show-grid">
+        &nbsp;
+    </div>
+    <div class="span9 show-grid">
+        <h5>Assign a publisher</h5>
+
+        <form id="addPublisher" class="form-stacked replace-form" action="@{ContentInception.addPublisher()}" method="POST" data-replace="#publisherlist">
+            <fieldset>
+
+                <input type="hidden" value='${_resource?.id}' name="resourceId"/>
+
+
+                <div class="clearfix">
+                    <label for="publisher_name">Name</label>
+
+                    <div class="input">
+                        <input class="span9 autocomplete-relation" id="publisher_name" name="publisherName" type="text"
+                               data-url="@{ContentInception.publisherNameList()}">
+                    </div>
+                </div>
+                <!-- /clearfix -->
+                <div class="clearfix">
+                    <label for="publisher_city">City</label>
+
+                    <div class="input">
+                        <input class="span9 autocomplete-relation" id="publisher_city" name="publisherCity" type="text"
+                               data-url="@{ContentInception.publisherCityList()}">
+                    </div>
+                </div>
+                <!-- /clearfix -->
+
+                <input type="submit" class="btn primary" value="Done">
+
+            </fieldset>
+        </form>
+
+    </div>
+</div>

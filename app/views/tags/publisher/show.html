@@ -1,0 +1,53 @@
+<!-- Publisher !-->
+#{if _resource}
+
+    #{list _resource?.publishers , as:'value'}
+    <div class="row highlight-hover">
+        <div class="span3">
+            <div class="vote">
+
+                #{ifnot value.isVotedUp(_user)}
+
+                        <form class="replace-form" action="@{Voting.votePublisher()}" data-replace="#publisherlist">
+                            <input type="hidden" name="valueAssignid" value="${value.id}"/>
+                            <input type="hidden" name="isVoteup" value="true"/>
+                            <input data-id="vote-up" type="submit" class="vote-up-off" title="This content is of good quality."/>
+                        </form>
+
+                #{/ifnot}
+
+                #{else}
+                    <input data-id="vote-up" type="submit" class="vote-up-on" title="Voted"/>
+                #{/else}
+
+                <span class="vote-count-post">${value.votingResults()} </span>
+
+                #{ifnot value.isVotedDown(_user)}
+
+                        <form class="replace-form" action="@{Voting.votePublisher()}" data-replace="#publisherlist">
+                            <input type="hidden" name="valueAssignid" value="${value.id}"/>
+                            <input type="hidden" name="isVoteup" value="false"/>
+                            <input data-id="vote-down" type="submit" class="vote-down-off" title="Information not useful."/>
+                        </form>
+
+                #{/ifnot}
+                #{else}
+                    <input data-id="vote-down" type="submit" class="vote-down-on" title="Voted"/>
+                #{/else}
+
+            </div>
+        </div>
+        <div class="span9 show-grid">
+            <span class="badge">${value.assignedProperty()} </span>
+        </div>
+    </div>
+    #{/list}
+
+
+
+#{/if}
+#{else}
+Resource empty
+#{/else}
+
+<!-- Publisher -->

@@ -1,0 +1,23 @@
+<!-- File -->
+<div class="row">
+
+    <div class="span12">
+        &nbsp;
+
+        <fieldset>
+            <div class="bottom_line">
+                <legend>File</legend>
+            </div>
+        </fieldset>
+
+        <div id="filelist">
+            #{file/show resource:_resource, user:_user /}
+        </div>
+
+        <div id="fileInception" >
+            #{file/insert resource:_resource,user:_user /}
+        </div>
+
+    </div>
+
+</div><!-- File set -->

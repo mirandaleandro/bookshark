@@ -1,0 +1,393 @@
+.bottom_line{
+    padding: 20px 10px 5px;
+    margin: -20px -20px 20px;
+    margin-bottom: 17px;
+    border-bottom: 1px solid #DDD;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #DDD;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.bottom_line{
+    padding: 20px 10px 5px;
+    margin: -20px -20px 20px;
+    margin-bottom: 17px;
+    border-bottom: 1px solid #DDD;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #DDD;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.vote-up-off, .vote-down-off,.vote-up-on,.vote-down-on{
+
+    background-image: url("/public/images/stackoverflow.png");
+
+    height: 20px;
+    width: 20px;
+    text-indent: -9999em;
+    font-size: 1px;
+
+    cursor: pointer;
+
+    display: block;
+    margin: 0 auto;
+    width: 41px;
+    background-position: 0px -300px;
+    height: 25px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 25px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    -webkit-appearance: none;
+    border: none;
+    -webkit-box-shadow: none;
+    width:40px !important;
+    background-color: transparent;
+}
+.vote-up-off{
+    background-position: 0px -265px;
+
+
+
+}
+
+.vote-up-on{
+    background-position: 0px -230px;
+}
+
+.vote-down-on{
+    background-position: 0px -330px;
+
+
+
+}
+.vote-count-post{
+
+    display: block;
+    color: #808185;
+    font-weight: bold;
+    font-size: 200%;
+
+
+}
+.vote{
+    float: right;
+    height: 80px;
+    width: 45px;
+    text-align: center;
+
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+.item-stream {
+    background-color: #f5f5f5;
+    border: 1px solid #d8d8d8;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.full-search-bar {
+    top:220px;
+    height:250px;
+    width: 72%;
+    margin: 0 auto 38px;
+    position: relative;
+}
+.full-search-bar form {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+.full-search-bar form .clearfix { margin: 0 }
+.full-search-bar form input[type=text] {
+    float: left;
+    height: 30px;
+    font-size: 20px;
+    line-height: 24px;
+    -webkit-border-radius: 6px 0 0 6px;
+    -moz-border-radius: 6px 0 0 6px;
+    border-radius: 6px 0 0 6px;
+    border-right: 0;
+    width: 95%;
+    margin-bottom: 0;
+}
+.full-search-bar form button[type=submit] {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 46px;
+    height: 41px;
+    -webkit-border-radius: 0 6px 6px 0;
+    -moz-border-radius: 0 6px 6px 0;
+    border-radius: 0 6px 6px 0;
+}
+.full-search-bar .search-input-item {
+    padding: 10px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+.full-search-bar form input[type=text] { height: 35px }
+.full-search-bar form button[type=submit] { height: 46px }
+
+.search-button{
+    -webkit-appearance: none;
+    -webkit-box-align: center;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.199219) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.046875) 0px 1px 2px 0px;
+    -webkit-transition-delay: 0s;
+    -webkit-transition-duration: 0.10000000149011612s;
+    -webkit-transition-property: background-position;
+    -webkit-transition-timing-function: linear;
+    background-color: #222;
+    background-image: -webkit-linear-gradient(top, #555, #222);
+    background-position: 0px -15px;
+    background-repeat: repeat-x;
+    border-bottom-color: rgba(0, 0, 0, 0.246094);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 6px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgba(0, 0, 0, 0.0976563);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-right-color: rgba(0, 0, 0, 0.0976563);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-top-color: rgba(0, 0, 0, 0.0976563);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 6px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    box-shadow: rgba(255, 255, 255, 0.199219) 0px 1px 0px 0px inset, rgba(0, 0, 0, 0.046875) 0px 1px 2px 0px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    height: 46px;
+    letter-spacing: normal;
+    line-height: normal;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 9px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 9px;
+    position: absolute;
+    right: 0px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0px;
+    text-shadow: rgba(0, 0, 0, 0.246094) 0px -1px 0px;
+    text-transform: none;
+    top: 0px;
+    vertical-align: middle;
+    width: 46px;
+    word-spacing: 0px;
+}
+/* Override some defaults */
+form
+{
+    margin-bottom: 0px;
+}
+
+html, body {
+    background-color: #eee;
+}
+body {
+    padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+}
+.container > footer p {
+    text-align: center; /* center align it with the container */
+}
+.container {
+    width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+}
+
+/* The white background content wrapper */
+.content {
+    background-color: #fff;
+    padding: 20px;
+    margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    min-height: 700px;
+}
+
+/* Page header tweaks */
+.page-header {
+    background-color: #f5f5f5;
+    padding: 20px 20px 10px;
+    margin: -20px -20px 20px;
+}
+
+/* Styles you shouldn't keep as they are for displaying this base example only */
+.content .span10,
+.content .span4 {
+    min-height: 500px;
+}
+/* Give a quick and non-cross-browser friendly divider */
+.content .span4 {
+    margin-left: 0;
+    padding-left: 19px;
+    border-left: 1px solid #eee;
+}
+
+.topbar .btn {
+    border: 0;
+}
+
+.navbar-text{
+    display: block;
+    float: none;
+    padding: 10px 10px 11px;
+    line-height: 19px;
+    text-decoration: none;
+}
+
+.minheight{
+    min-height: 400px;
+}
+
+.description-history{
+    display: none;
+}
+
+del {
+    color: white;
+    background: rgba(150,0,0,0.5);
+}
+ins {
+    color: white;
+    background: rgba(0,150,0,0.5);
+}
+#tooltip {
+    border: solid 1px;
+    width: 150px;
+    position: absolute;
+    display: none;
+}
+#tooltip span {
+    font-family: vardana, tahoma, sans-serif;
+    font-size: 66&#37;;
+    text-indent: 5px;
+    background-color: #ccc;
+    border-bottom: solid 1px;
+    display: block;
+    line-height: 2em;
+}
+#tooltip div {
+    font-family: vardana, tahoma, sans-serif;
+    font-size: 66%;
+    padding: 5px;
+}
+
+.v-centered{
+    position: relative;
+    top:50%;
+}
+
+.search-sidebar{
+
+}
+
+.search-main-content{
+
+}
+
+.resource-search-result
+{
+    padding-bottom: 20px;
+}
+
+.search-resource-title
+{
+    color: #145B82;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    height: auto;
+    line-height: 23px;
+    padding-left: 2px;
+    padding-right: 2px;
+
+}
+
+.search-resource-link
+{
+    color: #093;
+    margin-bottom: 1px;
+}
+
+.h5
+{
+    color: #404040;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizelegibility;
+    width: 618px;
+}
+.highlight-hover:hover{
+
+    background: rgba(150, 150, 150, 0.2);
+}
+
+.user-badges-thumbs
+{
+   height: 230px;
+   width: 160px;
+}
+
+.listmenu ul
+{
+    margin: 0 0 5px 0;
+    padding: 0 0 2px 0;
+    list-style-type: none;
+    width:185px;
+}
+
+.listmenu li a
+{
+    display: block;
+    height: 16px;
+    padding: 4px 0 4px 14px;
+}
+
+.listmenu li a:hover {
+    background-color: #666;
+    color:#fff;
+}
+
+.smoothy{
+    opacity: 0.4;
+}
+div .row .span9{
+    margin-top: 22px;
+}

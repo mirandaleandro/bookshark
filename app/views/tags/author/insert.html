@@ -1,0 +1,26 @@
+<!-- Author !-->
+<div class="row">
+    <div class="span3 show-grid">
+        &nbsp;
+    </div>
+    <div class="span9 show-grid">
+    <h5>Assign an author</h5>
+
+        <form id="addAuthor" class="form-stacked replace-form" action="@{ContentInception.addAuthor()}" method="POST" data-replace="#authorlist">
+            <fieldset>
+                <div class="clearfix">
+                    <div class="input">
+                        <input type="hidden" value='${_resource?.id}' name="resourceId" />
+                        <input type="hidden" value='${_user?.id}' name="assignerId" />
+                        <input class="span9 autocomplete-relation" name="value" type="text" data-url="@{ContentInception.authorsList()}">
+
+                    </div>
+                </div>
+
+                <input type="submit" class="btn primary" value="Done">
+
+            </fieldset>
+        </form>
+
+    </div>
+</div>

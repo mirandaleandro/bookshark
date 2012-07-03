@@ -1,0 +1,22 @@
+<!-- File -->
+<div class="row">
+    <div class="span3 show-grid">
+        &nbsp;
+    </div>
+    <div class="span9 show-grid">
+    <h5>Insert new file</h5>
+
+        <form id="addFile" class="form-stacked" action="@{ContentInception.addFile()}" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <div class="clearfix">
+                    <div class="input">
+                        <input type="hidden" value='${_resource?.id}' name="resourceId" />
+                        <input type="hidden" value='${_user?.id}' name="assignerId" />
+                        <input class="span9" id="file" name="file" type="file">
+                        <input type="submit" value="Send"/>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

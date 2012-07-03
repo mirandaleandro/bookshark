@@ -1,0 +1,27 @@
+<!-- Language !-->
+<div class="row">
+    <div class="span3 show-grid">
+        &nbsp;
+    </div>
+    <div class="span9 show-grid">
+    <h5>Assign a language</h5>
+
+        <form id="addLanguage" class="form-stacked replace-form" action="@{ContentInception.addLanguage()}" method="POST" data-replace="#languagelist">
+            <fieldset>
+                <div class="clearfix">
+                    <div class="input">
+                        <input type="hidden" value='${_resource?.id}' name="resourceId" />
+                        <input type="hidden" value='${_user?.id}' name="assignerId" />
+                        <input class="span9 autocomplete-relation" name="value" type="text" data-url="@{ContentInception.languagesList()}">
+
+                    </div>
+                </div>
+
+                <input type="submit" class="btn primary" value="Done">
+
+            </fieldset>
+        </form>
+
+
+    </div>
+</div>

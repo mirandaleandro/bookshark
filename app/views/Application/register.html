@@ -1,0 +1,77 @@
+#{extends 'main.html' /}
+#{set title:'Register' /}
+#{top user:user, pageName:"register"/}
+
+
+<div class="container">
+
+    <div class="content">
+
+        #{page_header pagename:'Register',tagline:'Account creation' /}
+
+        <div class="row">
+
+        #{form @saveUser() }
+            <fieldset>
+
+                #{field 'user.username'}
+                    <div class="clearfix">
+
+                        <label for="${field.name}">Username</label>
+
+                        <div class="input">
+                            <input class="xlarge" id="${field.name}" name="${field.name}" size="30"
+                                                  type="text" value="${user?.username}">
+                        </div>
+                    </div>
+                #{/field}
+
+                #{field 'user.name'}
+                <div class="clearfix">
+                    <label for="${field.name}">Name</label>
+
+                    <div class="input"><input class="xlarge" id="${field.name}" name="${field.name}" size="30"
+                                              type="text" value="${user?.name}">
+                    </div>
+                </div>
+            #{/field}
+
+        #{field 'user.password'}
+            <div class="clearfix">
+
+                <label for="${field.name}">Password</label>
+
+                <div class="input">
+                    <input class="xlarge" id="${field.name}" name="${field.name}" size="30" type="password" value="${user?.password}">
+                </div>
+
+            </div>
+        #{/field}
+
+        #{field 'verifyPassword'}
+            <div class="clearfix">
+
+                <label for="${field.name}">Verify password</label>
+
+                <div class="input">
+                    <input class="xlarge" id="${field.name}" name="${field.name}" size="30" type="password" value="${verifyPassword}">
+                </div>
+
+            </div>
+        #{/field}
+
+            <div class="actions">
+                <input type="submit" class="btn primary" value="Save changes">&nbsp;
+                <button type="reset" class="btn">Cancel</button>
+            </div>
+
+        </fieldset>
+        #{/form}
+
+        </div>
+
+    </div>
+
+#{bottom /}
+
+</div>

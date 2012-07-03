@@ -1,0 +1,64 @@
+#{if _list}
+
+    #{list _list , as:'value'}
+    <div class="row">
+        <div class="span3">
+            <div class="vote">
+
+                #{ifnot value.isVotedUp(_user)}
+
+                    #{if _user.isEnthusiast()}
+                        <form class="replace-form" action="${_votingAction}">
+                            <input type="hidden" name="valueAssignid" value="${value.id}"/>
+                            <input type="hidden" name="isVoteup" value="true"/>
+                            <input data-id="vote-up" type="submit" class="vote-up-off" title="This content is of good quality."/>
+                        </form>
+                    #{/if}
+                    #{else}
+                        <form class="forbidden forbiddenVoteForm">
+                            <input data-id="vote-up" type="submit" class="vote-up-off" title="This content is of good quality."/>
+                        </form>
+                    #{/else}
+
+                #{/ifnot}
+
+                #{else}
+                    <input data-id="vote-up" type="submit" class="vote-up-on" title="Voted"/>
+                #{/else}
+
+                <span class="vote-count-post">${value.votingResults()} </span>
+
+                #{ifnot value.isVotedDown(_user)}
+
+                    #{if _user.isInspector()}
+                        <form class="replace-form" action="${_votingAction}">
+                            <input type="hidden" name="valueAssignid" value="${value.id}"/>
+                            <input type="hidden" name="isVoteup" value="false"/>
+                            <input data-id="vote-down" type="submit" class="vote-down-off" title="Information not useful."/>
+                        </form>
+                    #{/if}
+                    #{else }
+                        <form class="forbidden forbiddenVoteForm" action="#">
+                            <input data-id="vote-down" type="submit" class="vote-down-off" title="Information not useful."/>
+                        </form>
+                    #{/else}
+
+                #{/ifnot}
+                #{else}
+                    <input data-id="vote-down" type="submit" class="vote-down-on" title="Voted"/>
+                #{/else}
+
+            </div>
+        </div>
+        <div class="span9 show-grid">
+            <span>AAAAAAAAA${value?.assignedProperty?.value}</span>
+        </div>
+    </div>
+    #{/list}
+
+
+
+#{/if}
+#{else}
+List is Empty
+#{/else}

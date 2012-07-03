@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="${_response_encoding}">
+        <!--link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}"-->
+
+        <link rel="stylesheet" href="@{'/public/bootstrap/css/bootstrap.css'}">
+        <link rel="stylesheet" href="@{'/public/bootstrap/css/bootstrap-responsive.css'}">
+        <!--link rel="stylesheet" href="@{'/public/stylesheets/docs.css'}" !-->
+        <link rel="stylesheet" href="@{'/public/stylesheets/prettify.css'}">
+        <link rel="stylesheet" href="@{'/public/stylesheets/bootstrap.css'}">
+        <link rel="stylesheet" href="@{'/public/stylesheets/bookshark.css'}">
+        <!--link rel="stylesheet" href="@{'/public/stylesheets/all.css'}"-->
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <script src="@{'/public/javascripts/jquery-1.7.2.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="@{'/public/javascripts/jsdiff.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+
+        <script src="@{'/public/javascripts/bookshark.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <!--link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" /-->
+        <link rel="stylesheet" href="/public/stylesheets/jquery-ui.css" type="text/css" media="all" />
+
+        <!--script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script-->
+        <script src="/public/javascripts/jquery-ui.min.js" type="text/javascript"></script>
+        <script src="@{'/public/javascripts/jquery.form.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+
+        <script src="@{'/public/bootstrap/js/bootstrap.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+
+
+
+        #{get 'moreScripts' /}
+
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+        <!--script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script-->
+        <script src="@{'/public/javascripts/html5.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <![endif]-->
+
+
+    </head>
+    <body>
+        #{doLayout /}
+    </body>
+</html>

@@ -1,0 +1,85 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+#{top user:user, pageName:"user" /}
+
+
+
+<div class="container">
+
+    <div class="content">
+
+    #{page_header pagename:'User Info' /}
+
+        <h3>Username: ${user==null?"Unregistered user":user.username}</h3>
+        <h3>Real Name: ${user==null?"Unregistered user":user.name}</h3>
+        <h3>Reputation: ${user==null?0:user.points}</h3>
+       <fieldset>
+        <div class="bottom_line">
+            <legend>Badges</legend>
+        </div>
+       </fieldset>
+
+        <ol class="thumbnails">
+
+            <li class="span3">
+                <div class="thumbnail user-badges-thumbs">
+                    <img src="@{'public/images/visitor.jpg'}" alt="">
+                    <h5>Visitor</h5>
+                    <p>Visitors are the first level of the user's hierarchy. They are able to search content and <a href="@{Application.register()}">register</a>.</p>
+                </div>
+            </li>
+
+
+
+            <li class="span3 #{ifnot user?.isPublisher()}smoothy#{/ifnot}">
+                <div class="thumbnail user-badges-thumbs">
+                    <img src="@{'public/images/publisher.jpg'}" alt="">
+                    <h5>Publisher</h5>
+                    <p>Publishers are registered users that upload content (and earn points) and download any contents.</p>
+                </div>
+            </li>
+
+
+            <li class="span3 #{ifnot user?.isEnthusiast()}smoothy#{/ifnot}">
+                <div class="thumbnail user-badges-thumbs">
+                    <img src="@{'public/images/enthusiast.jpg'}" alt="">
+                    <h5>Enthusiast</h5>
+                    <p>Enthusiast may up vote content!</p>
+                </div>
+            </li>
+
+            <li class="span3">
+                <div class="thumbnail user-badges-thumbs #{ifnot user?.isInspector()}smoothy#{/ifnot}">
+                    <img src="@{'public/images/inspector.jpg'}" alt="">
+                    <h5>Inspector</h5>
+                    <p>Inspectors may down vote contents.</p>
+                </div>
+            </li>
+
+            <li class="span3">
+                <div class="thumbnail user-badges-thumbs #{ifnot user?.isReporter()}smoothy#{/ifnot}">
+                    <img src="@{'public/images/reporter.jpg'}" alt="">
+                    <h5>Reporter</h5>
+                    <p>Reporters may insert new content.</p>
+                </div>
+            </li>
+
+            <li class="span3">
+                <div class="thumbnail user-badges-thumbs #{ifnot user?.isEditor()}smoothy#{/ifnot}">
+                    <img src="@{'public/images/editor.jpg'}" alt="">
+                    <h5>Editor</h5>
+                    <p>Editors are users that full access to the system's tools.</p>
+                </div>
+            </li>
+        </ol>
+
+    </div>
+
+#{bottom /}
+
+</div> <!-- /container -->
+
+
+
+

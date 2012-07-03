@@ -1,0 +1,23 @@
+<!-- Subject !-->
+<div class="row">
+
+    <div class="span12">
+        &nbsp;
+
+        <fieldset>
+            <div class="bottom_line">
+                <legend>Subject</legend>
+            </div>
+        </fieldset>
+
+        <div id="subjectlist">
+            #{subject/show resource:_resource, user:_user /}
+        </div >
+
+        <div  id="subjectInception">
+            #{subject/insert resource:_resource,user:_user /}
+        </div>
+
+    </div>
+
+</div><!-- Subject set -->

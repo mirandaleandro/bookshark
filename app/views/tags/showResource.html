@@ -1,0 +1,31 @@
+#{if _resource}
+<div class="resource-search-result">
+    <a href="${_resource.link()}"><div class="search-resource-title">${_resource.mostRelevantTitle()}</div>  </a>
+    <div class="search-resource-link">${_resource.link()}</div>
+    <div class="search-resource-identifier">
+        <span class="h5">id:&nbsp;</span><span class="label label-info"> ${_resource.identifier} </span>
+
+    </div>
+
+    <div class="searh-resource-subjects">
+    <span class="h5">subjects:&nbsp;</span>
+    #{list _resource.subjects, as:'subject'}
+        %{long votes = subject.votingResults(); }%
+        #{if votes > -1 }
+            <span class="label label-important label-level-${votes}">${subject.assignedProperty()} </span>
+        #{/if}
+    #{/list}
+    </div>
+
+    <div class="search-resource-authors">
+        <span class="h5">authors:&nbsp;</span>
+        #{list _resource.mostRelevantAuthors(), as:'author'}
+            <span class="label label-success label-level-${author.votingResults()}">${author.assignedProperty()} </span>
+        #{/list}
+    </div>
+</div>
+
+#{/if}
+#{else}
+Resource seems empty =(
+#{/else}

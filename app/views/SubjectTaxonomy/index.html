@@ -1,0 +1,24 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+#{top user:user, pageName:"subjects" /}
+
+
+<div class="container">
+
+    <div class="content">
+
+    #{page_header pagename:'Subject Taxonomy' /}
+
+    #{taxonomy/tree user:user /}
+
+
+    </div>
+
+#{bottom /}
+
+</div> <!-- /container -->
+
+
+
+

@@ -1,0 +1,23 @@
+<!-- Publisher !-->
+<div class="row">
+
+    <div class="span12">
+        &nbsp;
+
+        <fieldset>
+            <div class="bottom_line">
+                <legend>Publisher</legend>
+            </div>
+        </fieldset>
+
+        <div id="publisherlist">
+            #{publisher/show resource:_resource, user:_user /}
+        </div >
+
+        <div  id="publisherInception">
+            #{publisher/insert resource:_resource,user:_user /}
+        </div>
+
+    </div>
+
+</div><!-- Publisher set -->

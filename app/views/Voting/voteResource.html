@@ -1,0 +1,55 @@
+#{extends 'main.html' /}
+#{set title:'Content inception' /}
+#{top user:user /}
+
+<div class="container">
+
+    <div class="content">
+
+
+        #{page_header pagename:'Voting pools',tagline:'what\'s your opinion?'  /}
+        #{ifnot user}
+        Please login
+        #{/ifnot}
+        #{else}
+
+            #{ifnot resource}
+                Sorry, could not find such resource
+            #{/ifnot}
+            #{else}
+
+                #{file/voting resource:resource,user:user /}
+
+                #{title/voting resource:resource, user:user/}
+
+                #{language/voting resource:resource, user:user/}
+
+                #{author/voting resource:resource, user:user/}
+
+                #{subject/voting resource:resource, user:user/}
+
+                #{date/voting resource:resource, user:user/}
+
+                #{publisher/voting resource:resource, user:user/}
+
+                #{description/voting resource:resource, user:user/}
+
+        <script>	
+            $('#addSubjectButton').click(function()
+            {
+                $("#subjects").append("<div class=\"clearfix\"><label for=\"subject1\">Subject</label><div class=\"input\">  <input class=\"span9\" id=\"subject1\" name=\"subjects\" type=\"text\"></div>	</div><!-- /clearfix -->");
+            });
+                                    
+            $('#addAuthorButton').click(function()
+            {
+                $("#authors").append("<div class=\"clearfix\"><label for=\"author1\">Author</label><div class=\"input\"><input class=\"span9\" id=\"author1\" name=\"authors\" size=\"30\" type=\"text\"></div></div><!-- /clearfix -->");
+            });
+        </script>
+
+      #{/else} 
+        #{/else}
+    
+    </div>
+#{bottom /}
+</div>
+

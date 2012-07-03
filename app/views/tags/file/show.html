@@ -1,0 +1,62 @@
+<!-- File -->
+#{if _resource}
+
+    #{list _resource?.files , as:'archivingFile'}
+
+    <div class="row highlight-hover">
+        <div class="span3">
+            <div class="vote">
+
+                #{ifnot archivingFile.isVotedUp(_user)}
+
+
+                    <form class="replace-form" action="@{Voting.voteFile()}" data-replace="#filelist">
+                        <input type="hidden" name="fileAssignid" value="${archivingFile.id}"/>
+                        <input type="hidden" name="isVoteup" value="true"/>
+                        <input data-id="vote-up" type="submit" class="vote-up-off"
+                               title="This content is of good quality."/>
+                    </form>
+
+
+                #{/ifnot}
+
+                #{else}
+                    <input data-id="vote-up" type="submit" class="vote-up-on" title="Voted"/>
+                #{/else}
+
+                <span class="vote-count-post">${archivingFile.votingResults()} </span>
+
+                #{ifnot archivingFile.isVotedDown(_user)}
+
+
+                    <form class="replace-form" action="@{Voting.voteFile()}" data-replace="#filelist">
+                        <input type="hidden" name="fileAssignid" value="${archivingFile.id}"/>
+                        <input type="hidden" name="isVoteup" value="false"/>
+                        <input data-id="vote-down" type="submit" class="vote-down-off" title="Information not useful."/>
+                    </form>
+
+
+                #{/ifnot}
+                #{else}
+                    <input data-id="vote-down" type="submit" class="vote-down-on" title="Voted"/>
+                #{/else}
+
+            </div>
+        </div>
+        <div class="span9">
+
+            <span class="span2 badge">File ID ${archivingFile?.id} </span>
+            <span class="span6">
+                <a class="btn primary pull-right" href=${archivingFile?.link(request.getBase())}>Download </a>
+            </span>
+
+        </div>
+    </div>
+    #{/list}
+
+
+
+#{/if}
+#{else}
+Resource empty
+#{/else}
